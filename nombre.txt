@@ -8,3 +8,5 @@ Daniel
 Royce
 Ismael
 Elias
+Mandril
+Tenorio

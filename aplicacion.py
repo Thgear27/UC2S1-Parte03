@@ -1,7 +1,9 @@
+import gestor_personas
+
 usuario_txt = open('login.txt','r')
-usuarioR= usuario_txt.read();
+usuarioR= usuario_txt.read()
 clave_txt = open('clave.txt','r')
-claveR= clave_txt.read();
+claveR= clave_txt.read()
 
 menu = ("Datos Personales: \n 1. Listar personas \n 2. Agregar personas \n 3. Salir")
 
@@ -21,4 +23,15 @@ def validar_credenciales():
     return False
 
 if validar_credenciales() :
-    print(menu) 
+    while True:
+        print("\n" + menu)
+        opcion = input("Ingrese una opcion: ")
+        if opcion == "1":
+            gestor_personas.listar_personas()
+        elif opcion == "2":
+            gestor_personas.agregar_personas() 
+        elif opcion == "3":
+            break
+        else:
+            print("Opcion incorrecta")
+   
